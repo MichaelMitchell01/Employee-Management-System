@@ -1,50 +1,45 @@
-- # Employee Management System (MySQL)
+# Employee Management System (MySQL)
 
-This project is a relational database built using MySQL and MySQL Workbench to simulate an employee management system for a fictional company. It includes core database components such as employees, departments, job roles, and salaries, and demonstrates the use of SQL queries, views, and stored procedures.
+A relational database built in MySQL 8.0 using MySQL Workbench 8.0.41 CE to simulate basic employee management operations. Includes tables for employees, departments, jobs, and salaries. Demonstrates use of SQL joins, views, and stored procedures.
 
-## 🛠 Tools Used
+## Tools Used
 
+- MySQL Server 8.0
 - MySQL Workbench 8.0.41 CE (64-bit)
-- MySQL Server 8.4
-- SQL (DDL, DML, stored procedures, views)
+- SQL (DDL, DML, procedures, views)
 
-## 📁 Schema Overview
+## Schema Overview
 
-The system includes the following tables:
+Tables:
+- `departments`: Department names
+- `jobs`: Job titles
+- `employees`: Employee info and reporting lines
+- `salaries`: Salary history
 
-- `departments`: Stores department names.
-- `jobs`: Stores job titles.
-- `employees`: Stores employee personal and job-related info.
-- `salaries`: Tracks employee salary history.
+## Features
 
-### Entity Relationship Diagram
+- Create and manage employee records, jobs, and departments
+- Track salaries with from/to dates
+- Add employees with a stored procedure
+- Generate department-level salary reports
+- Summarize data with views
 
-> <img width="308" alt="ERD" src="https://github.com/user-attachments/assets/64656370-df95-426e-8383-d29ba330f29b" />
+## SQL Files
 
-## ⚙️ Features
+- [`create_tables.sql`](./create_tables.sql): Table definitions
+- [`insert_data.sql`](./insert_data.sql): Sample records
+- [`procedures.sql`](./procedures.sql): Stored procedure to add employees
+- [`views.sql`](./views.sql): View to summarize employee data
 
-- Create and manage employee records, job roles, and departments.
-- Track salary history using a normalized salary table.
-- Use stored procedures for employee creation.
-- Generate departmental salary averages and employee summaries.
-- Create reusable views for reporting.
+## Sample Queries
 
-  ## 📂 SQL Files
-
-- [`create_tables.sql`](./create_tables.sql): Contains all DDL table creation scripts.
-- [`insert_data.sql`](./insert_data.sql): Sample data for departments, jobs, employees, and salaries.
-- [`procedures.sql`](./procedures.sql): Stored procedure to insert new employees.
-- [`views.sql`](./views.sql): View for employee summary reports.
-
-## 🔍 Sample SQL Queries
-
-### List employees with their departments
+List employees and departments:
 ```sql
 SELECT e.first_name, e.last_name, d.department_name
 FROM employees e
 JOIN departments d ON e.department_id = d.department_id;
 
-### Average salary by department
+### Average salary by department:
 
 SELECT d.department_name, AVG(s.salary) AS average_salary
 FROM employees e
@@ -52,42 +47,36 @@ JOIN departments d ON e.department_id = d.department_id
 JOIN salaries s ON e.employee_id = s.employee_id
 GROUP BY d.department_name;
 
-### Add an employee via a stored procedure
+### Add an employee:
 
 CALL AddEmployee('Eve', 'Martinez', 'eve.m@example.com', '555-0104', '2023-05-01', 1, 1, 1);
 
-### 📊 Views
-A view called "employee_summary" consolidates key employee info:
+## View:
 
 SELECT * FROM employee_summary;
 
-### 💡 Key Takeaways
-• Practiced relational database design with foreign key constraints.
+## How to Use:
 
-• Gained hands-on experience with JOIN operations and stored procedures.
+1. Clone or download this repo
 
-• Built dynamic queries to support real-world business logic and reporting.
+2. Open MySQL Workbench and connect to your MySQL 8.0 server
 
-### 📂 How to Use
-1. Clone this repository.
+3. Run scripts in this order:
 
-2. Import the SQL script into MySQL Workbench.
+• create_tables.sql
 
-3. Execute scripts in order:
+• insert_data.sql
 
-• Schema and table creation
+• procedures.sql
 
-• Sample data inserts
+• views.sql
 
-• Procedures and views
+4. Run queries or extend as needed
 
-4. Modify or extend as needed to test additional features or enhancements.
+## Contact:
 
-### 📬 Contact
-Michael B. Mitchell
 mbmitchell410@gmail.com
-https://linkedin.com/in/michaelm410/
+https://www.linkedin.com/in/michaelm410/
 
----
 
-Let me know if you’d like a dbdiagram link or a formatted schema diagram to add!
+Let me know when you're ready to create or upload the ERD, or if you want to expand this into a multi-user app with a frontend later on.
