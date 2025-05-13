@@ -33,7 +33,7 @@ Tables:
 
 ## Sample Queries
 
-List employees and departments:
+### List employees and departments:
 ```sql
 SELECT e.first_name, e.last_name, d.department_name
 FROM employees e
@@ -47,11 +47,12 @@ JOIN departments d ON e.department_id = d.department_id
 JOIN salaries s ON e.employee_id = s.employee_id
 GROUP BY d.department_name;
 
+
 ### Add an employee:
 
 CALL AddEmployee('Eve', 'Martinez', 'eve.m@example.com', '555-0104', '2023-05-01', 1, 1, 1);
 
-## View:
+### View:
 
 SELECT * FROM employee_summary;
 
@@ -77,6 +78,3 @@ SELECT * FROM employee_summary;
 
 mbmitchell410@gmail.com
 https://www.linkedin.com/in/michaelm410/
-
-
-Let me know when you're ready to create or upload the ERD, or if you want to expand this into a multi-user app with a frontend later on.
