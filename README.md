@@ -33,13 +33,13 @@ Tables:
 
 ## Sample Queries
 
-### List employees and departments:
+### List employees and departments
 ```sql
 SELECT e.first_name, e.last_name, d.department_name
 FROM employees e
 JOIN departments d ON e.department_id = d.department_id;
 
-**Average salary by department:**
+```Average salary by department:
 
 SELECT d.department_name, AVG(s.salary) AS average_salary
 FROM employees e
@@ -47,16 +47,15 @@ JOIN departments d ON e.department_id = d.department_id
 JOIN salaries s ON e.employee_id = s.employee_id
 GROUP BY d.department_name;
 
-
-**Add an employee:**
+```Add an employee:
 
 CALL AddEmployee('Eve', 'Martinez', 'eve.m@example.com', '555-0104', '2023-05-01', 1, 1, 1);
 
-**View:**
+```View:
 
 SELECT * FROM employee_summary;
 
-**How to Use:**
+```How to Use:
 
 1. Clone or download this repo
 
@@ -74,7 +73,7 @@ SELECT * FROM employee_summary;
 
 4. Run queries or extend as needed
 
-## Contact:
+```Contact:
 
 mbmitchell410@gmail.com
 https://www.linkedin.com/in/michaelm410/
