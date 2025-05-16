@@ -39,6 +39,7 @@ SELECT e.first_name, e.last_name, d.department_name
 FROM employees e
 JOIN departments d ON e.department_id = d.department_id;
 
+```markdown
 ### Average salary by department
 ```sql
 SELECT d.department_name, AVG(s.salary) AS average_salary
@@ -47,15 +48,17 @@ JOIN departments d ON e.department_id = d.department_id
 JOIN salaries s ON e.employee_id = s.employee_id
 GROUP BY d.department_name;
 
-
+```markdown
 ### Add an employee:
 ```sql
 CALL AddEmployee('Eve', 'Martinez', 'eve.m@example.com', '555-0104', '2023-05-01', 1, 1, 1);
 
+```markdown
 ### View:
 ```sql
 SELECT * FROM employee_summary;
 
+```markdown
 ### How to Use:
 ```sql
 1. Clone or download this repo
@@ -74,6 +77,7 @@ SELECT * FROM employee_summary;
 
 4. Run queries or extend as needed
 
+```markdown
 ### Contact:
 ```sql
 mbmitchell410@gmail.com
