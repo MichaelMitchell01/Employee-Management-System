@@ -31,6 +31,7 @@ Tables:
 - [`procedures.sql`](./procedures.sql): Stored procedure to add employees
 - [`views.sql`](./views.sql): View to summarize employee data
 
+```markdown
 ## Sample Queries
 
 ### List employees and departments
