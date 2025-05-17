@@ -41,16 +41,19 @@ FROM employees e
 JOIN departments d ON e.department_id = d.department_id;
 
 Average salary by department
+```sql
 SELECT d.department_name, AVG(s.salary) AS average_salary
 FROM employees e
 JOIN departments d ON e.department_id = d.department_id
 JOIN salaries s ON e.employee_id = s.employee_id
 GROUP BY d.department_name;
 
-Add an employee:
+Add an employee
+```sql
 CALL AddEmployee('Eve', 'Martinez', 'eve.m@example.com', '555-0104', '2023-05-01', 1, 1, 1);
 
 View
+```sql
 SELECT * FROM employee_summary;
 
 How to Use:
