@@ -31,7 +31,6 @@ Tables:
 - [`procedures.sql`](./procedures.sql): Stored procedure to add employees
 - [`views.sql`](./views.sql): View to summarize employee data
 
-```markdown
 ## Sample Queries
 
 ### List employees and departments
@@ -39,7 +38,6 @@ Tables:
 SELECT e.first_name, e.last_name, d.department_name
 FROM employees e
 JOIN departments d ON e.department_id = d.department_id;
-
 
 Average salary by department
 SELECT d.department_name, AVG(s.salary) AS average_salary
@@ -54,20 +52,20 @@ CALL AddEmployee('Eve', 'Martinez', 'eve.m@example.com', '555-0104', '2023-05-01
 View
 SELECT * FROM employee_summary;
 
-How to Use:
+How to Use
 1. Clone or download this repo
 
 2. Open MySQL Workbench and connect to your MySQL 8.0 server
 
 3. Run scripts in this order:
 
-• create_tables.sql
+ • create_tables.sql
 
-• insert_data.sql
+ • insert_data.sql
 
-• procedures.sql
+ • procedures.sql
 
-• views.sql
+ • views.sql
 
 4. Run queries or extend as needed
 
