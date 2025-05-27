@@ -40,6 +40,7 @@ SELECT e.first_name, e.last_name, d.department_name
 FROM employees e
 JOIN departments d ON e.department_id = d.department_id;
 
+
 Average salary by department
 SELECT d.department_name, AVG(s.salary) AS average_salary
 FROM employees e
