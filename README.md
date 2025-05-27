@@ -38,37 +38,43 @@ Tables:
 SELECT e.first_name, e.last_name, d.department_name
 FROM employees e
 JOIN departments d ON e.department_id = d.department_id;
+```
 
-Average salary by department
+### Average salary by department
+```sql
 SELECT d.department_name, AVG(s.salary) AS average_salary
 FROM employees e
 JOIN departments d ON e.department_id = d.department_id
 JOIN salaries s ON e.employee_id = s.employee_id
 GROUP BY d.department_name;
+```
 
 ### Add an employee
+```sql
 CALL AddEmployee('Eve', 'Martinez', 'eve.m@example.com', '555-0104', '2023-05-01', 1, 1, 1);
+```
 
 ### View
+```sql
 SELECT * FROM employee_summary;
+```
 
-### How to Use
-1. Clone or download this repo
+## How to Use
 
-2. Open MySQL Workbench and connect to your MySQL 8.0 server
+1. Clone or download this repo  
 
-3. Run scripts in this order:
+2. Open MySQL Workbench and connect to your MySQL 8.0 server  
 
- • create_tables.sql
-
- • insert_data.sql
-
- • procedures.sql
-
- • views.sql
+3. Run scripts in this order:  
+   • `create_tables.sql`  
+   • `insert_data.sql`  
+   • `procedures.sql`  
+   • `views.sql`  
 
 4. Run queries or extend as needed
 
-### Contact:
-mbmitchell410@gmail.com
-https://www.linkedin.com/in/michaelm410/
+## Contact
+
+**Michael B. Mitchell**  
+📧 mbmitchell410@gmail.com  
+🔗 [LinkedIn](https://www.linkedin.com/in/michaelm410/)
