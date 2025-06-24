@@ -73,7 +73,7 @@ SELECT * FROM employee_summary;
 
 4. Run queries or extend as needed
 
-![ERD](./erd.png)
+![ERD](./ERD.png)
 
 ## Contact
 
