@@ -7,6 +7,7 @@ A relational database built in MySQL 8.0 using MySQL Workbench 8.0.41 CE to simu
 - MySQL Server 8.0
 - MySQL Workbench 8.0.41 CE (64-bit)
 - SQL (DDL, DML, procedures, views)
+- Tableau 2025.2
 
 ## Schema Overview
 
