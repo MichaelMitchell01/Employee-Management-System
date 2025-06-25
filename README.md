@@ -75,6 +75,10 @@ SELECT * FROM employee_summary;
 
 ![ERD](./ERD.png)
 
+## Tableau Dashboard
+
+- 📊 [`total_salary.twbx`](./total_salary.twbx): Bar chart showing total salary by department built in Tableau
+
 ## Contact
 
 **Michael B. Mitchell**  
